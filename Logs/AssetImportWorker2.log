@@ -1,0 +1,898 @@
+Unity Editor version:    2021.3.6f1 (7da38d85baf6)
+Branch:                  2021.3/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 12.4 (Build 21F79)
+Darwin version:          21.5.0
+Architecture:            x86_64
+Running under Rosetta:   NO
+Available memory:        8192 MB
+Using pre-set license
+Pro License: YES
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2021.3.6f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+/Users/failworksgame/Documents/GitHub/Johnny-Longhand
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+50365
+Successfully changed project path to: /Users/failworksgame/Documents/GitHub/Johnny-Longhand
+/Users/failworksgame/Documents/GitHub/Johnny-Longhand
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 112.72 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.6f1 (7da38d85baf6)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.6f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/failworksgame/Documents/GitHub/Johnny-Longhand/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+E2251 preferred device: Intel(R) Iris(TM) Plus Graphics 655 (low power)
+Metal devices available: 1
+0: Intel(R) Iris(TM) Plus Graphics 655 (low power)
+Using device Intel(R) Iris(TM) Plus Graphics 655 (low power)
+Initializing Metal device caps: Intel(R) Iris(TM) Plus Graphics 655
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.6f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.6f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2021.3.6f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56337
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.6f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.6f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Registered in 0.003934 seconds.
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+[usbmuxd] Send listen message
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 91.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.895 seconds
+Domain Reload Profiling:
+	ReloadAssembly (896ms)
+		BeginReloadAssembly (136ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (614ms)
+			LoadAssemblies (137ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (152ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (366ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (58ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (92ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (163ms)
+				ProcessInitializeOnLoadMethodAttributes (52ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.017006 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/failworksgame/Documents/GitHub/Johnny-Longhand/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/failworksgame/Documents/GitHub/Johnny-Longhand/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.402 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1403ms)
+		BeginReloadAssembly (119ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (28ms)
+		EndReloadAssembly (1130ms)
+			LoadAssemblies (127ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (377ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (72ms)
+			SetupLoadedEditorAssemblies (497ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (23ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (85ms)
+				ProcessInitializeOnLoadAttributes (348ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2021.3.6f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.30 seconds
+Refreshing native plugins compatible for Editor in 0.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3868 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 43 unused Assets / (129.1 KB). Loaded Objects now: 4316.
+Memory consumption went from 251.4 MB to 251.3 MB.
+Total: 3.792427 ms (FindLiveObjects: 0.355125 ms CreateObjectMapping: 0.340574 ms MarkObjects: 2.937322 ms  DeleteObjects: 0.158561 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002749 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/failworksgame/Documents/GitHub/Johnny-Longhand/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/failworksgame/Documents/GitHub/Johnny-Longhand/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.20 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.516 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1517ms)
+		BeginReloadAssembly (153ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (57ms)
+		EndReloadAssembly (1244ms)
+			LoadAssemblies (77ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (397ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (94ms)
+			SetupLoadedEditorAssemblies (575ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (43ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (93ms)
+				ProcessInitializeOnLoadAttributes (388ms)
+				ProcessInitializeOnLoadMethodAttributes (46ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.49 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3849 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 36 unused Assets / (106.2 KB). Loaded Objects now: 4319.
+Memory consumption went from 251.2 MB to 251.1 MB.
+Total: 6.235916 ms (FindLiveObjects: 0.702854 ms CreateObjectMapping: 0.405248 ms MarkObjects: 4.837917 ms  DeleteObjects: 0.287982 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002351 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/failworksgame/Documents/GitHub/Johnny-Longhand/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/failworksgame/Documents/GitHub/Johnny-Longhand/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.199 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1199ms)
+		BeginReloadAssembly (141ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (53ms)
+		EndReloadAssembly (950ms)
+			LoadAssemblies (75ms)
+			RebuildTransferFunctionScriptingTraits (1ms)
+			SetupTypeCache (344ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (53ms)
+			SetupLoadedEditorAssemblies (414ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (31ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (69ms)
+				ProcessInitializeOnLoadAttributes (273ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.22 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3849 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 36 unused Assets / (106.3 KB). Loaded Objects now: 4322.
+Memory consumption went from 251.5 MB to 251.4 MB.
+Total: 4.533704 ms (FindLiveObjects: 0.504585 ms CreateObjectMapping: 0.411204 ms MarkObjects: 3.482343 ms  DeleteObjects: 0.134338 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002435 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/failworksgame/Documents/GitHub/Johnny-Longhand/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/failworksgame/Documents/GitHub/Johnny-Longhand/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.209 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1210ms)
+		BeginReloadAssembly (141ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (51ms)
+		EndReloadAssembly (960ms)
+			LoadAssemblies (75ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (337ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (426ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (29ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (66ms)
+				ProcessInitializeOnLoadAttributes (286ms)
+				ProcessInitializeOnLoadMethodAttributes (42ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.39 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3849 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 36 unused Assets / (107.3 KB). Loaded Objects now: 4325.
+Memory consumption went from 251.7 MB to 251.6 MB.
+Total: 5.052482 ms (FindLiveObjects: 0.430973 ms CreateObjectMapping: 0.311598 ms MarkObjects: 4.152064 ms  DeleteObjects: 0.156572 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 21512.940366 seconds.
+  path: Assets/Obi/Samples/RopeAndRod/SampleResources/Textures/siyahBeyaz.png
+  artifactKey: Guid(e7f219c4b0a894fdd983948722fd1d60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Samples/RopeAndRod/SampleResources/Textures/siyahBeyaz.png using Guid(e7f219c4b0a894fdd983948722fd1d60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e8b55959a08d3e085ac59aa9f81ad9d') in 0.224327 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.648018 seconds.
+  path: Assets/Materials
+  artifactKey: Guid(cc000c1f3df8f45969dc83e288633c74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials using Guid(cc000c1f3df8f45969dc83e288633c74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82bfab90717d6fc50f775997591be910') in 0.001676 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.396138 seconds.
+  path: Assets/Materials/ArmMat1.mat
+  artifactKey: Guid(f13f0c3e1a4f84caf860f34d18e96465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/ArmMat1.mat using Guid(f13f0c3e1a4f84caf860f34d18e96465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62516685bee1eec3e7ff51e0d98a8ec6') in 0.198670 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.649677 seconds.
+  path: Assets/Obi/Editor/Resources/AddControlPoint.psd
+  artifactKey: Guid(6d2b606052e73408595395e402a926e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/AddControlPoint.psd using Guid(6d2b606052e73408595395e402a926e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '355f16f207bcbac346806190c3b0ef03') in 0.892832 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000085 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png
+  artifactKey: Guid(7051dba417b3d53409f2918f1ea4938d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png using Guid(7051dba417b3d53409f2918f1ea4938d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0877a7457681dfb72979ffd7adeb8ba9') in 0.023263 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Joystick Pack/Sprites/Handles/Handle_Ridged.png
+  artifactKey: Guid(3a74f678ee8f3bd49aacf3de1ae4bcaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Handles/Handle_Ridged.png using Guid(3a74f678ee8f3bd49aacf3de1ae4bcaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '431dac4356895d3b37e401b9b08a7d99') in 0.046295 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/Obi/Editor/Resources/BackfacesButton.psd
+  artifactKey: Guid(6463b09cd29e543a49c1e2ea87b121f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/BackfacesButton.psd using Guid(6463b09cd29e543a49c1e2ea87b121f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c17b6873d896df6a9b56ba9f4495d0a') in 0.016746 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/Joystick Pack/Sprites/Handles/Handle_Ridged_Arrows.png
+  artifactKey: Guid(a6c56474666ce0647bdb766e9b4764b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Handles/Handle_Ridged_Arrows.png using Guid(a6c56474666ce0647bdb766e9b4764b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c11bbb2202d13c9c50f650a522ff980b') in 0.028355 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Obi/Editor/Resources/ClearButton.psd
+  artifactKey: Guid(e6e3e5775eebd49e6aee6abb8470baa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/ClearButton.psd using Guid(e6e3e5775eebd49e6aee6abb8470baa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f4c15abb4856ef7f898f1aaea5b6585') in 0.011489 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Obi/Editor/Resources/Icons/ObiAmbientForceZone Icon.png
+  artifactKey: Guid(092f06332c018434b8c8ea86164ef4fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/Icons/ObiAmbientForceZone Icon.png using Guid(092f06332c018434b8c8ea86164ef4fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d95bf82ecc0668d43b8ff640e713849') in 0.013295 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Obi/Samples/Common/SampleResources/Textures/checker.psd
+  artifactKey: Guid(8fbd9c5f957b8434883cdfce9d6a3c27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Samples/Common/SampleResources/Textures/checker.psd using Guid(8fbd9c5f957b8434883cdfce9d6a3c27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29155aaaf93c785a3261b46669385827') in 0.027771 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000113 seconds.
+  path: Assets/Obi/Samples/Common/SampleResources/Textures/ClothPattern.png
+  artifactKey: Guid(a60971e26baf9443db442cd7e2ba5b5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Samples/Common/SampleResources/Textures/ClothPattern.png using Guid(a60971e26baf9443db442cd7e2ba5b5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe178bf881eaa8ed826b4849f3157ed9') in 0.015580 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png
+  artifactKey: Guid(8da095e39e9b4df488dfd436f81116d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png using Guid(8da095e39e9b4df488dfd436f81116d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75d069ff439987e24e58552684326e4d') in 0.037876 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001205 seconds.
+  path: Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Ridged_Arrows.png
+  artifactKey: Guid(b8467ea5fbaf9ba42908de6411bd443d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Ridged_Arrows.png using Guid(b8467ea5fbaf9ba42908de6411bd443d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f51498959f97eb04bc403df2db6e24a3') in 0.058127 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000076 seconds.
+  path: Assets/Obi/Editor/Resources/Icons/ObiBone Icon.png
+  artifactKey: Guid(0a18e0376cc184a9b96ebb3bf0175cc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/Icons/ObiBone Icon.png using Guid(0a18e0376cc184a9b96ebb3bf0175cc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5301834693aba37b9f337de8021ea401') in 0.017276 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000076 seconds.
+  path: Assets/Obi/Editor/Resources/Icons/ObiEmitterMaterialFluid Icon.png
+  artifactKey: Guid(ea94643102f314a62a9fab85aaf9c559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/Icons/ObiEmitterMaterialFluid Icon.png using Guid(ea94643102f314a62a9fab85aaf9c559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0c0be796ddd605f36f7f0d1bdda0837') in 0.014730 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Assets/Obi/Editor/Resources/Icons/ObiEmitterShapeMesh Icon.png
+  artifactKey: Guid(aadcf43cc18b74da587fc0fbe4fc019a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/Icons/ObiEmitterShapeMesh Icon.png using Guid(aadcf43cc18b74da587fc0fbe4fc019a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c77832de8c3225beca30b6f9bc795b6') in 0.017804 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/Obi/Editor/Resources/Icons/ObiBendTwistConstraints Icon.png
+  artifactKey: Guid(91de8d14a7b7a42d88d336323c428b20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/Icons/ObiBendTwistConstraints Icon.png using Guid(91de8d14a7b7a42d88d336323c428b20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c90245be4cce8b2c4fde81ec64386d58') in 0.030789 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/Obi/Editor/Resources/Icons/ObiEmitter Icon.png
+  artifactKey: Guid(d1048d188bf4d4e32ac7395da95aedd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/Icons/ObiEmitter Icon.png using Guid(d1048d188bf4d4e32ac7395da95aedd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86349f28b79b120a0d5f539605ecad69') in 0.016365 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/Obi/Editor/Resources/Icons/ObiEmitterShapeEdge Icon.png
+  artifactKey: Guid(42373f4f9c4d04bc18125f69cf225dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/Icons/ObiEmitterShapeEdge Icon.png using Guid(42373f4f9c4d04bc18125f69cf225dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76c3dc35ba4aac557d3de02cb5556b7c') in 0.012044 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Obi/Editor/Resources/Icons/ObiCollider2D Icon.png
+  artifactKey: Guid(e7185d0557058412db2fc499de3a0739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/Icons/ObiCollider2D Icon.png using Guid(e7185d0557058412db2fc499de3a0739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bebff25f326b46ad942723a9981a454') in 0.012678 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000077 seconds.
+  path: Assets/Obi/Editor/Resources/BrushHandle.psd
+  artifactKey: Guid(5cbb736fc86b64409b40fe7050933899) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/BrushHandle.psd using Guid(5cbb736fc86b64409b40fe7050933899) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '989836f03b711834b1073f625afc3137') in 0.029540 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000085 seconds.
+  path: Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Ridged.png
+  artifactKey: Guid(6304ad603f150b649b764d29bbc2a87b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Ridged.png using Guid(6304ad603f150b649b764d29bbc2a87b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d6d02d057dbe1719271dc434812c776') in 0.032669 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000127 seconds.
+  path: Assets/Obi/Editor/Resources/Icons/ObiCurve Icon.png
+  artifactKey: Guid(ed34a2f317b874412ad24d7bab730ad5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/Icons/ObiCurve Icon.png using Guid(ed34a2f317b874412ad24d7bab730ad5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b600c309b970cac21336d8b9b18d7abb') in 0.014561 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/Obi/Editor/Resources/FillButton.psd
+  artifactKey: Guid(5aa30f0cf5bab4c7dab839a28bd5a3b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/FillButton.psd using Guid(5aa30f0cf5bab4c7dab839a28bd5a3b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebc6a914dff7ca4269380e9b8ff8b5ea') in 0.021444 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Outline.png
+  artifactKey: Guid(cd0a2c1b2c014ba4c80c1df786e150e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Outline.png using Guid(cd0a2c1b2c014ba4c80c1df786e150e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfa41fca68aa5cfbc91f66e2ca9c1549') in 0.032477 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000128 seconds.
+  path: Assets/Obi/Editor/Resources/Icons/ObiRigidbody2D Icon.png
+  artifactKey: Guid(21e01eb398ab24a7abb1f3b493af6b20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/Icons/ObiRigidbody2D Icon.png using Guid(21e01eb398ab24a7abb1f3b493af6b20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61c6047f24e544129230e2656dd8b834') in 0.029375 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000085 seconds.
+  path: Assets/Obi/Editor/Resources/Icons/ObiSkinConstraints Icon.png
+  artifactKey: Guid(e58e2a3c37c7547a8a791a56e0a1ace6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/Icons/ObiSkinConstraints Icon.png using Guid(e58e2a3c37c7547a8a791a56e0a1ace6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd26c957c4dccec5aedce159f8879a756') in 0.014457 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Obi/Editor/Resources/Icons/ObiSoftbody Icon.png
+  artifactKey: Guid(61d065505e09e47bc9f211c93b8d8941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/Icons/ObiSoftbody Icon.png using Guid(61d065505e09e47bc9f211c93b8d8941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '074c899e3719c32d1ade51c37352f12d') in 0.012945 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/Obi/Editor/Resources/Icons/ObiRopeSection Icon.png
+  artifactKey: Guid(fdb742a900c8d453ea5ce5027e80ad00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/Icons/ObiRopeSection Icon.png using Guid(fdb742a900c8d453ea5ce5027e80ad00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00ad96c713e7996758d7a074e939c72a') in 0.028830 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000098 seconds.
+  path: Assets/Obi/Editor/Resources/Icons/ObiSolver Icon.png
+  artifactKey: Guid(4bb17fa3a0a95413a817e60391d26010) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/Icons/ObiSolver Icon.png using Guid(4bb17fa3a0a95413a817e60391d26010) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '721ce17a7a2ab23edecd16b3ab273a97') in 0.017406 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/Obi/Editor/Resources/Icons/ObiStretchShearConstraints Icon.png
+  artifactKey: Guid(b3583331769a946aab1e4c59859547b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/Icons/ObiStretchShearConstraints Icon.png using Guid(b3583331769a946aab1e4c59859547b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '209b35adec9393c7b521b7e17174c704') in 0.031040 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Obi/Editor/Resources/Icons/ObiActorBlueprint Icon.png
+  artifactKey: Guid(d0123218ec6144d0983c099fc7339924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/Icons/ObiActorBlueprint Icon.png using Guid(d0123218ec6144d0983c099fc7339924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38927868f13560ffe589b7ba7ea5a251') in 0.012559 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000100 seconds.
+  path: Assets/Obi/Editor/Resources/Icons/ObiAerodynamicConstraints Icon.png
+  artifactKey: Guid(8626b43f419d1466a9dc1c1509308b13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/Icons/ObiAerodynamicConstraints Icon.png using Guid(8626b43f419d1466a9dc1c1509308b13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '317861bd6f7bf132ed041fec6bfb6051') in 0.013203 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000070 seconds.
+  path: Assets/Obi/Editor/Resources/Icons/ObiSkinnedClothRenderer Icon.png
+  artifactKey: Guid(b876d8c51699543acb2d919b54e8fd7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/Icons/ObiSkinnedClothRenderer Icon.png using Guid(b876d8c51699543acb2d919b54e8fd7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b065aa42bc4348719912f73a65c52b60') in 0.014061 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Obi/Editor/Resources/Icons/ObiStitcher Icon.png
+  artifactKey: Guid(ec05a2c75bb4a4ce5a3a1baa76b4c8d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/Icons/ObiStitcher Icon.png using Guid(ec05a2c75bb4a4ce5a3a1baa76b4c8d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86c9905c160543228feb04824c650322') in 0.028867 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Obi/Editor/Resources/Icons/ObiMeshTopology Icon.png
+  artifactKey: Guid(8e5266f7a0df04a17a5505a19aa2d4d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/Icons/ObiMeshTopology Icon.png using Guid(8e5266f7a0df04a17a5505a19aa2d4d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76c5dda085a777dfe84a8089857c952e') in 0.016800 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000100 seconds.
+  path: Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Outline_Arrows.png
+  artifactKey: Guid(48c0d4d6bebaa934384b07aa1e2f8184) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Outline_Arrows.png using Guid(48c0d4d6bebaa934384b07aa1e2f8184) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fed5de0205e389242be853bb4164afe3') in 0.047622 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000076 seconds.
+  path: Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Ridged_Arrows.png
+  artifactKey: Guid(4cbc879550e5e374a925e2e0a84d6f3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Ridged_Arrows.png using Guid(4cbc879550e5e374a925e2e0a84d6f3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f1c0487c3c4bbbd939f4dcf1456da69') in 0.036973 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000077 seconds.
+  path: Assets/Obi/Editor/Resources/RemoveControlPoint.psd
+  artifactKey: Guid(7d2ee37b895e649c186b4de7004bd444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/RemoveControlPoint.psd using Guid(7d2ee37b895e649c186b4de7004bd444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88191b5fcb5a18c92841a037ea8f66bb') in 0.021099 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Obi/Resources/GUI/profiler_bck.png
+  artifactKey: Guid(a3476527001d2494a88fa4236e8dbf0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Resources/GUI/profiler_bck.png using Guid(a3476527001d2494a88fa4236e8dbf0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdb9d51c72419ac3402b140101feb555') in 0.011561 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000097 seconds.
+  path: Assets/Obi/Editor/Resources/TextureIcon.psd
+  artifactKey: Guid(931c48569a82e4dae84d4702bf6da199) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/TextureIcon.psd using Guid(931c48569a82e4dae84d4702bf6da199) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4641ea6f58edb4937094219f08515cad') in 0.013792 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Assets/Obi/Editor/Resources/PauseButton.psd
+  artifactKey: Guid(280ec959fe3324151be804cf285fe931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/PauseButton.psd using Guid(280ec959fe3324151be804cf285fe931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b5f6713cca09c1cc08c90ca59bd7e03') in 0.033201 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Obi/Resources/GUI/profiler_toolbar.png
+  artifactKey: Guid(98f1105e6aebd46a1878df08ab79b5d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Resources/GUI/profiler_toolbar.png using Guid(98f1105e6aebd46a1878df08ab79b5d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a526c8768a774a24ac194260f6dfeb89') in 0.013428 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/Obi/Editor/Resources/Icons/ObiVolumeConstraints Icon.png
+  artifactKey: Guid(d9d3ddf824bd449e5b405439ee034b12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/Icons/ObiVolumeConstraints Icon.png using Guid(d9d3ddf824bd449e5b405439ee034b12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41c9dff8cff48ea4eceac05e25ee4296') in 0.010102 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000081 seconds.
+  path: Assets/Obi/Editor/Resources/LeafButton.png
+  artifactKey: Guid(fc6329308ec7e4fa0a7134b8c1294dfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/LeafButton.png using Guid(fc6329308ec7e4fa0a7134b8c1294dfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7abb594802cbdd3d4d0a8c21e8a41157') in 0.029739 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Obi/Editor/Resources/RemoveIcon.psd
+  artifactKey: Guid(79919ab1f90654f4f811134da7164129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/RemoveIcon.psd using Guid(79919ab1f90654f4f811134da7164129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db97281213aaeb2a26b9124edff70390') in 0.011178 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/Obi/Editor/Resources/StepButton.psd
+  artifactKey: Guid(3a4a9652d5a3546a494c48ad14e4b492) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/StepButton.psd using Guid(3a4a9652d5a3546a494c48ad14e4b492) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e715e7526455927cf82d2e0ad6d76d22') in 0.018282 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/Obi/Editor/Resources/OrientControlPoint.psd
+  artifactKey: Guid(7727f2388bff242b1bdf55ae7a1abaec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/OrientControlPoint.psd using Guid(7727f2388bff242b1bdf55ae7a1abaec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '311a44cb62fa993af235c1a2df8c916e') in 0.028412 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Obi/Editor/Resources/SelectedWorld_bck.psd
+  artifactKey: Guid(01844e929694344c79f595973dd49a4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/SelectedWorld_bck.psd using Guid(01844e929694344c79f595973dd49a4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd32a7884ae12e8919fc571bdb9b6c2da') in 0.015666 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000083 seconds.
+  path: Assets/Obi/Editor/Resources/UnpinButton.psd
+  artifactKey: Guid(546d0fbcbc7794babadce998d53cc471) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/UnpinButton.psd using Guid(546d0fbcbc7794babadce998d53cc471) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45c1b85ff439f89a5dcbdfdd66ad405b') in 0.011308 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Ridged.png
+  artifactKey: Guid(08c1fa6351174a9439d97cfc9d3307cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Ridged.png using Guid(08c1fa6351174a9439d97cfc9d3307cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00380fdc5ca33c549aede72867477e5c') in 0.031946 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Ridged_Arrows.png
+  artifactKey: Guid(9332cf0d233636a40a024382720294a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Ridged_Arrows.png using Guid(9332cf0d233636a40a024382720294a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '418f7289c1983f6a1acae7bb9376ec05') in 0.036014 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/Obi/Editor/Resources/RemoveButton.psd
+  artifactKey: Guid(8b56a65aecb4c42dea430c75690b8a4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/RemoveButton.psd using Guid(8b56a65aecb4c42dea430c75690b8a4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a20691dc7a323983c1e3e227f1d4b1bf') in 0.012744 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Obi/Editor/Resources/Icons/ObiSoftbodySkinner Icon.png
+  artifactKey: Guid(654315230d2e241c3a9995c1e60507d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/Icons/ObiSoftbodySkinner Icon.png using Guid(654315230d2e241c3a9995c1e60507d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e91c151a84afc2579d52f65698516272') in 0.014841 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Obi/Resources/GUI/task_bck.png
+  artifactKey: Guid(c237f5e557ded47598c1e8e4c650aeda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Resources/GUI/task_bck.png using Guid(c237f5e557ded47598c1e8e4c650aeda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbdcdfcd72cca1369b8197e4f2a01532') in 0.034844 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Obi/Editor/Resources/StopRecButton.psd
+  artifactKey: Guid(e4c64699292b6490aac7e91c52abdc2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/StopRecButton.psd using Guid(e4c64699292b6490aac7e91c52abdc2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '167cce440201f2010d9774f8a349237e') in 0.011248 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/Obi/Editor/Resources/SelectIcon.psd
+  artifactKey: Guid(d10211a5e35be4a1f97e25a7f78b84fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/SelectIcon.psd using Guid(d10211a5e35be4a1f97e25a7f78b84fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '014123d4bf9f1e2392c2077ecb736678') in 0.023665 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Obi/Editor/Resources/RotateControlPoint.psd
+  artifactKey: Guid(f33b6dcf4f7f946909841f077b4f1aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Obi/Editor/Resources/RotateControlPoint.psd using Guid(f33b6dcf4f7f946909841f077b4f1aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14d20b38bb842887f084d3c04fd97af8') in 0.020142 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Header.jpg
+  artifactKey: Guid(78a59ca99f8987941adb61f9e14a06a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Header.jpg using Guid(78a59ca99f8987941adb61f9e14a06a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8355456780ca72ef2efa13649fd1d2f') in 1.163057 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.534770 seconds.
+  path: Assets/Materials/ArmMat1.mat
+  artifactKey: Guid(f13f0c3e1a4f84caf860f34d18e96465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/ArmMat1.mat using Guid(f13f0c3e1a4f84caf860f34d18e96465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e8e8a83aac5e1ac4fa7d1ff441832a2') in 0.014889 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002473 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/failworksgame/Documents/GitHub/Johnny-Longhand/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/failworksgame/Documents/GitHub/Johnny-Longhand/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.29 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.565 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1566ms)
+		BeginReloadAssembly (169ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (68ms)
+		EndReloadAssembly (1284ms)
+			LoadAssemblies (88ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (427ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (82ms)
+			SetupLoadedEditorAssemblies (588ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (48ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (93ms)
+				ProcessInitializeOnLoadAttributes (390ms)
+				ProcessInitializeOnLoadMethodAttributes (52ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3849 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 36 unused Assets / (108.2 KB). Loaded Objects now: 4381.
+Memory consumption went from 274.6 MB to 274.5 MB.
+Total: 6.446873 ms (FindLiveObjects: 0.663597 ms CreateObjectMapping: 0.362317 ms MarkObjects: 5.180165 ms  DeleteObjects: 0.239330 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 686.811829 seconds.
+  path: Assets/Models/Hand.fbx
+  artifactKey: Guid(e1f959a797561421ba11416b80b6949c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Hand.fbx using Guid(e1f959a797561421ba11416b80b6949c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3da82215d3007279372217f4fdc427aa') in 0.404361 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.635297 seconds.
+  path: Assets/Models/Hand.fbx
+  artifactKey: Guid(e1f959a797561421ba11416b80b6949c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Hand.fbx using Guid(e1f959a797561421ba11416b80b6949c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00b4aeada218d766c4e40a0f2b0c1066') in 0.023338 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.517250 seconds.
+  path: Assets/Models/Hand.fbx
+  artifactKey: Guid(e1f959a797561421ba11416b80b6949c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Hand.fbx using Guid(e1f959a797561421ba11416b80b6949c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1be9797bed3372a924256e74d71251d0') in 0.026149 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002377 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/failworksgame/Documents/GitHub/Johnny-Longhand/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/failworksgame/Documents/GitHub/Johnny-Longhand/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.895 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1896ms)
+		BeginReloadAssembly (269ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (129ms)
+		EndReloadAssembly (1475ms)
+			LoadAssemblies (124ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (596ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (87ms)
+			SetupLoadedEditorAssemblies (583ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (46ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (94ms)
+				ProcessInitializeOnLoadAttributes (387ms)
+				ProcessInitializeOnLoadMethodAttributes (52ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.33 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3849 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 36 unused Assets / (107.4 KB). Loaded Objects now: 4387.
+Memory consumption went from 279.1 MB to 279.0 MB.
+Total: 5.953240 ms (FindLiveObjects: 0.483208 ms CreateObjectMapping: 0.379623 ms MarkObjects: 4.920785 ms  DeleteObjects: 0.168536 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003059 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/failworksgame/Documents/GitHub/Johnny-Longhand/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/failworksgame/Documents/GitHub/Johnny-Longhand/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.91 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.269 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1270ms)
+		BeginReloadAssembly (144ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (53ms)
+		EndReloadAssembly (998ms)
+			LoadAssemblies (78ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (372ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (419ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (34ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (68ms)
+				ProcessInitializeOnLoadAttributes (278ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.16 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3849 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 36 unused Assets / (106.5 KB). Loaded Objects now: 4390.
+Memory consumption went from 279.3 MB to 279.2 MB.
+Total: 5.249460 ms (FindLiveObjects: 0.490635 ms CreateObjectMapping: 0.417460 ms MarkObjects: 4.159483 ms  DeleteObjects: 0.180834 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
