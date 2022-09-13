@@ -180,7 +180,14 @@ namespace Obi
                                 m_CursorElement = rope.elements[index - 1];
                             }
                             else
-                                m_CursorElement = rope.elements[0];
+                            {
+                                if (rope != null)
+                                {
+                                    m_CursorElement = rope.elements[0];
+                                }
+                                
+                            }
+                                
                         }
                     }
                 }
