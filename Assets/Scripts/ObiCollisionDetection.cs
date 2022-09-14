@@ -5,7 +5,14 @@ public class ObiCollisionDetection : MonoBehaviour
 {
     ObiSolver solver;
 
-    public GameObject Cube;
+    public GameController gameController;
+
+    public ArmScript armScript;
+
+    public int pointAmount;
+    public int pointCounter;
+
+    
 
     void Awake()
     {
@@ -27,27 +34,30 @@ public class ObiCollisionDetection : MonoBehaviour
         var world = ObiColliderWorld.GetInstance();
 
         // just iterate over all contacts in the current frame:
-        foreach (Oni.Contact contact in e.contacts)
+        if (armScript.DidWin && pointCounter < pointAmount)
         {
-            // if this one is an actual collision:
-            if (contact.distance < 0.01)
+            foreach (Oni.Contact contact in e.contacts)
             {
-                
+                // if this one is an actual collision:
+                if (contact.distance < 0.01)
+                {
 
-                /*ObiColliderBase col = world.colliderHandles[contact.bodyB].owner;
-                  if (col != null)
-                      {
-                           Cube.transform.position = col.
-                      }*/
+                    //armScript.BackCount++;
+                    armScript.BackwardsTransformList[pointCounter].localPosition = (Vector3)contact.pointB;
+                    armScript.BackwardsSetPointsList.Add(armScript.BackwardsTransformList[pointCounter]);
+                    pointCounter++;
 
-                int particleIndex = solver.simplices[contact.bodyA];
 
-                // do something with the particle, for instance get its position:
-                Cube.transform.position = solver.positions.GetVector3(particleIndex);
-
-                
+                    /*ObiColliderBase col = world.colliderHandles[contact.bodyB].owner;
+                    if (col != null)
+                    {
+                        
+                    }
+                    */
+                }
             }
         }
+        
     }
 
 }

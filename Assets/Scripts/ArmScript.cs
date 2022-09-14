@@ -35,11 +35,11 @@ public class ArmScript : MonoBehaviour
 
     public List<Transform> BackwardsTransformList;
 
+    public List<Transform> BackwardsSetPointsList;
+
+    public Transform BasePoint;
+
     public int BackCount;
-
-    private float BackTimeCounter;
-
-    public float BackTime;
 
     public GameObject HandVisual;
 
@@ -93,7 +93,7 @@ public class ArmScript : MonoBehaviour
             if (Input.GetMouseButton(0))
             {
 
-                SetPositionForBackwards();
+                //SetPositionForBackwards();
 
                 rotationX = Input.GetAxis("Mouse X") * rotationSpeed;
                 rotationY = Input.GetAxis("Mouse Y") * rotationSpeed;
@@ -118,13 +118,13 @@ public class ArmScript : MonoBehaviour
 
             if (rope.restLength >= maxLength)
             {
-                gameController.EndLevelTPV();
+                /*gameController.EndLevelTPV();
                 Invoke("ReverseArm", 2f);
                 gameController.IsGameStarted = false;
 
                 GetComponent<Collider>().enabled = false;
 
-                DidWin = false;
+                DidWin = false;*/
             }
         }
         else
@@ -134,7 +134,7 @@ public class ArmScript : MonoBehaviour
             if (isStartedReverse)
             {
 
-                if (BackCount < 0)
+                if (BackCount >= BackwardsSetPointsList.Count)
                 {
                     gameController.ArmObjects.SetActive(false);
                     gameController.ThieveLeanObject.SetActive(false);
@@ -148,16 +148,16 @@ public class ArmScript : MonoBehaviour
                 else
                 {
 
-                    transform.LookAt(BackwardsTransformList[BackCount].position);
+                    transform.LookAt(BackwardsSetPointsList[BackCount].position);
                     HandVisual.transform.localPosition = new Vector3(0f,0f,-1.32f);
                     HandVisual.transform.localRotation = Quaternion.Euler(new Vector3(0f, 180f, 0f));
-                    Vector3 directionalVector  = (BackwardsTransformList[BackCount].position - transform.position).normalized * forwardspeed * 5f;
+                    Vector3 directionalVector  = (BackwardsSetPointsList[BackCount].position - transform.position).normalized * forwardspeed * 5f;
                     rigidbody.velocity = directionalVector;
                     
-                    float distance = Vector3.Distance(rigidbody.position, BackwardsTransformList[BackCount].position);
+                    float distance = Vector3.Distance(rigidbody.position, BackwardsSetPointsList[BackCount].position);
                     if (distance <= 0.5f)
                     {
-                        BackCount--;
+                        BackCount++;
 
                     }
                     
@@ -177,42 +177,6 @@ public class ArmScript : MonoBehaviour
                 
             }
         }
-    }
-
-    private float ClaculateDisplacement()
-    {
-        displacementTime += Time.fixedDeltaTime;
-
-        var acceleration = (rigidbody.velocity.magnitude - lastVelocity) / displacementTime;
-        lastVelocity = rigidbody.velocity.magnitude;
-
-        float disp = (rigidbody.velocity.magnitude * displacementTime) + 0.5f * acceleration * Mathf.Sqrt(displacementTime);
-
-
-        return disp;
-    }
-
-    private void SetPositionForBackwards()
-    {
-        BackTimeCounter += Time.deltaTime;
-        if (BackTimeCounter >= BackTime)
-        {
-
-            Vector3 explosionPos = transform.position;
-            Collider[] colliders = Physics.OverlapSphere(explosionPos, 0.5f);
-            foreach (Collider hit in colliders)
-            {
-                if (hit.CompareTag("Roundable"))
-                {
-                    BackTimeCounter = 0;
-                    BackCount++;
-                    BackwardsTransformList[BackCount].position = transform.position;
-                }
-            }
-
-            
-        }
-        
     }
 
 
@@ -265,6 +229,7 @@ public class ArmScript : MonoBehaviour
     private void ReverseArm()
     {
         //rigidbody.isKinematic = false;
+        BackwardsSetPointsList.Add(BasePoint);
         isStartedReverse = true;
     }
 
