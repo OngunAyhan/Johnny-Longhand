@@ -139,10 +139,15 @@ public class ArmScript : MonoBehaviour
                 }
                 else
                 {
-                    //transform.position = Vector3.MoveTowards(transform.position, BackwardsTransformList[BackCount].position, 5f * forwardspeed * Time.deltaTime);
+                    
 
                     Vector3 directionalVector  = (BackwardsTransformList[BackCount].position - transform.position).normalized * forwardspeed * 5f;
-                    //transform.LookAt(transform.position - BackwardsTransformList[BackCount].position);
+                    
+                    //Vector3 handdir = (transform.position - BackwardsTransformList[BackCount].position);
+
+                    //Quaternion deltaRotation = Quaternion.Euler(handdir);
+                    //rigidbody.rotation = (rigidbody.rotation * Quaternion.Euler(BackwardsTransformList[BackCount].position - transform.position));
+
                     rigidbody.velocity = directionalVector;
                     
                     float distance = Vector3.Distance(rigidbody.position, BackwardsTransformList[BackCount].position);
@@ -200,8 +205,8 @@ public class ArmScript : MonoBehaviour
     {
 
         rigidbody.position = new Vector3(
-        Mathf.Clamp(rigidbody.position.x, -5f, 5f),
-        Mathf.Clamp(rigidbody.position.y, -1f, 1f),
+        Mathf.Clamp(rigidbody.position.x, -4f, 3.5f),
+        Mathf.Clamp(rigidbody.position.y, 0f, 1f),
         Mathf.Clamp(rigidbody.position.z, -5f, 5f));
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class GameController : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class GameController : MonoBehaviour
     public Vector3 CameraCharRot;
 
     public CameraFollower cameraFollower;
+
+    public Animator WindowAnimator;
 
     public GameObject ThieveObject;
 
@@ -41,21 +44,26 @@ public class GameController : MonoBehaviour
 
     public bool isArmOnPosition;
 
+    public GameObject ArrowObj;
+
     void Start()
     {
         StartCoroutine(StartLevel());
+        ArrowObj.transform.DOMoveY(1.8f, 0.8f).SetLoops(-1,LoopType.Yoyo).SetEase(Ease.InOutSine);
     }
 
     public IEnumerator StartLevel()
     {
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
+        WindowAnimator.SetTrigger("Open");
         cameraFollower.GoToPosSetter(CameraFPSPos, CameraFPSRot, 0);
         yield return new WaitForSeconds(1f);
+        ArrowObj.SetActive(false);
         ArmObjects.SetActive(true);
 
         Vector3 startingPos = ArmObjects.transform.position;
-        Vector3 finalPos = Vector3.zero;
+        Vector3 finalPos = new Vector3(ArmObjects.transform.position.x, ArmObjects.transform.position.y,0f);
         float elapsedTime = 0;
         float time = 0.5f;
 
@@ -89,7 +97,9 @@ public class GameController : MonoBehaviour
 
         if (CharMood)
         {
+            
             LootParticles.Play();
+            WindowAnimator.SetTrigger("Close");
             ThieveHandLoot.SetActive(true);
             HappyFaceObject.SetActive(true);
             ThieveAnimator.SetTrigger("Loot");

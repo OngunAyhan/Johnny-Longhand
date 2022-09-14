@@ -111,6 +111,7 @@
     <Compile Include="Assets/Obi/Samples/RopeAndRod/SampleResources/Scripts/CharacterControl2D.cs" />
     <Compile Include="Assets/Obi/Samples/RopeAndRod/SampleResources/Scripts/CursorController.cs" />
     <Compile Include="Assets/Obi/Samples/Common/SampleResources/Scripts/WorldSpaceGravity.cs" />
+    <Compile Include="Assets/Scripts/UpperObsPanel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
@@ -143,6 +144,7 @@
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets/Obi/CHANGELOG_rope.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
+    <None Include="Assets/Materials/MobileDiffuseColored.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
     <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
     <None Include="Assets/Obi/Plugins/libOni.bundle/Contents/Resources/CMakeLists.txt" />
@@ -855,6 +857,15 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder">
+      <HintPath>Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder.Base">
+      <HintPath>Library/ScriptAssemblies/Unity.Recorder.Base.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
