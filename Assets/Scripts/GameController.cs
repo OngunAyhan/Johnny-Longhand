@@ -21,6 +21,12 @@ public class GameController : MonoBehaviour
 
     public CameraFollower cameraFollower;
 
+    public GameObject ThieveObject;
+
+    public Animator ThieveAnimator;
+
+    public GameObject ThieveLeanObject;
+
     public GameObject ArmObjects;
 
     public GameObject NormalFaceObject;
@@ -29,7 +35,9 @@ public class GameController : MonoBehaviour
 
     public GameObject SadFaceObject;
 
-    public GameObject ThieveHandledObject;
+    public ParticleSystem LootParticles;
+
+    public GameObject ThieveHandLoot;
 
     public bool isArmOnPosition;
 
@@ -61,6 +69,9 @@ public class GameController : MonoBehaviour
         cameraFollower.SetCameraOffset();
         cameraFollower.CanGo = false;
         IsGameStarted = true;
+
+        ThieveObject.SetActive(false);
+        ThieveLeanObject.SetActive(true);
     }
 
     public void EndLevelTPV()
@@ -74,15 +85,20 @@ public class GameController : MonoBehaviour
     {
         cameraFollower.GoToPosSetter(CameraCharPos, CameraCharRot, 1);
 
-        //NormalFaceObject.SetActive(false);
+        NormalFaceObject.SetActive(false);
 
         if (CharMood)
         {
-            //HappyFaceObject.SetActive(true);
+            LootParticles.Play();
+            ThieveHandLoot.SetActive(true);
+            HappyFaceObject.SetActive(true);
+            ThieveAnimator.SetTrigger("Loot");
+            
         }
         else
         {
-            //SadFaceObject.SetActive(true);
+            SadFaceObject.SetActive(true);
+            ThieveAnimator.SetTrigger("Sad");
         }
     }
 

@@ -129,6 +129,9 @@ public class ArmScript : MonoBehaviour
                 if (BackCount < 0)
                 {
                     gameController.ArmObjects.SetActive(false);
+                    gameController.ThieveLeanObject.SetActive(false);
+                    gameController.ThieveObject.SetActive(true);
+                    gameController.ThieveObject.transform.rotation = Quaternion.Euler(new Vector3(0f,130f,0f));
                     //gameController.ThieveHandledObject.SetActive(true);
                     isStartedReverse = false;
                     gameController.CameraSendToCharPos(DidWin);
