@@ -1052,7 +1052,7 @@ GameObject:
   - component: {fileID: 323488882}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Roundable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1098,7 +1098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thickness: 0.09
+  thickness: 0.08
   material: {fileID: 11400000, guid: d368f2c47473d4bfb8dd9f08073cb403, type: 2}
   filter: -65535
   m_SourceCollider: {fileID: 323488885}
@@ -2344,7 +2344,7 @@ MonoBehaviour:
   - {fileID: 1091145168}
   - {fileID: 2115214177}
   BackCount: 0
-  BackTime: 2
+  BackTime: 1
   HandVisual: {fileID: 1477839811}
 --- !u!65 &569157412
 BoxCollider:
@@ -6653,8 +6653,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d174fab52f0c4b8399f25d5c3ea524c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  simulateWhenInvisible: 1
-  m_Backend: 1
+  simulateWhenInvisible: 0
+  m_Backend: 0
   parameters:
     mode: 0
     interpolation: 0
@@ -6666,7 +6666,7 @@ MonoBehaviour:
     maxDepenetration: 5
     continuousCollisionDetection: 1
     shockPropagation: 0
-    surfaceCollisionIterations: 16
+    surfaceCollisionIterations: 8
     surfaceCollisionTolerance: 99
   gravity: {x: 0, y: -9.81, z: 0}
   gravitySpace: 1
@@ -7366,7 +7366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   solverIndices: 
-  m_CollisionMaterial: {fileID: 11400000, guid: d368f2c47473d4bfb8dd9f08073cb403, type: 2}
+  m_CollisionMaterial: {fileID: 11400000, guid: b231b678223e044588ce32ebccbe77f3, type: 2}
   m_SurfaceCollisions: 0
   m_SelfCollisions: 1
   restLength_: 1.3276681

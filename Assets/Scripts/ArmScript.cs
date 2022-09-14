@@ -57,8 +57,7 @@ public class ArmScript : MonoBehaviour
         {
             if (Input.GetMouseButton(0))
             {
-                SetPositionForBackwards();
-
+                
                 if (!isStartedReverse)
                 {
 
@@ -67,6 +66,13 @@ public class ArmScript : MonoBehaviour
                     if (tension > 0.01f)
                     {
                         cursor.ChangeLength(rope.restLength + forwardspeed * Time.deltaTime);
+                    }
+                    else
+                    {
+                        if (rope.restLength > minLength)
+                        {
+                            cursor.ChangeLength(rope.restLength - forwardspeed * Time.deltaTime);
+                        }
                     }
                 }
 
@@ -87,7 +93,7 @@ public class ArmScript : MonoBehaviour
             if (Input.GetMouseButton(0))
             {
 
-                
+                SetPositionForBackwards();
 
                 rotationX = Input.GetAxis("Mouse X") * rotationSpeed;
                 rotationY = Input.GetAxis("Mouse Y") * rotationSpeed;
@@ -191,9 +197,20 @@ public class ArmScript : MonoBehaviour
         BackTimeCounter += Time.deltaTime;
         if (BackTimeCounter >= BackTime)
         {
-            BackTimeCounter = 0;
-            BackCount++;
-            BackwardsTransformList[BackCount].position = transform.position;
+
+            Vector3 explosionPos = transform.position;
+            Collider[] colliders = Physics.OverlapSphere(explosionPos, 0.5f);
+            foreach (Collider hit in colliders)
+            {
+                if (hit.CompareTag("Roundable"))
+                {
+                    BackTimeCounter = 0;
+                    BackCount++;
+                    BackwardsTransformList[BackCount].position = transform.position;
+                }
+            }
+
+            
         }
         
     }
@@ -228,6 +245,8 @@ public class ArmScript : MonoBehaviour
             HandledLootObject.SetActive(true);
             other.gameObject.SetActive(false);
             DidWin = true;
+            rigidbody.velocity = Vector3.zero;
+            rigidbody.angularVelocity = Vector3.zero;
         }
 
         if (other.gameObject.CompareTag("Obstacle"))
@@ -238,7 +257,7 @@ public class ArmScript : MonoBehaviour
             DidWin = false;
             other.gameObject.SetActive(false);
         }
-
+        
     }
 
 

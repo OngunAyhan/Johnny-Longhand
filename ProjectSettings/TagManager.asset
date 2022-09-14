@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Loot
   - Obstacle
+  - Roundable
   layers:
   - Default
   - TransparentFX
