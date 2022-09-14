@@ -41,6 +41,8 @@ public class ArmScript : MonoBehaviour
 
     public float BackTime;
 
+    public GameObject HandVisual;
+
     void Start()
     {
         //rope = GetComponent<ObiRope>();
@@ -139,15 +141,11 @@ public class ArmScript : MonoBehaviour
                 }
                 else
                 {
-                    
 
+                    transform.LookAt(BackwardsTransformList[BackCount].position);
+                    HandVisual.transform.localPosition = new Vector3(0f,0f,-1.32f);
+                    HandVisual.transform.localRotation = Quaternion.Euler(new Vector3(0f, 180f, 0f));
                     Vector3 directionalVector  = (BackwardsTransformList[BackCount].position - transform.position).normalized * forwardspeed * 5f;
-                    
-                    //Vector3 handdir = (transform.position - BackwardsTransformList[BackCount].position);
-
-                    //Quaternion deltaRotation = Quaternion.Euler(handdir);
-                    //rigidbody.rotation = (rigidbody.rotation * Quaternion.Euler(BackwardsTransformList[BackCount].position - transform.position));
-
                     rigidbody.velocity = directionalVector;
                     
                     float distance = Vector3.Distance(rigidbody.position, BackwardsTransformList[BackCount].position);
@@ -217,22 +215,28 @@ public class ArmScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-
-        gameController.EndLevelTPV();
-        Invoke("ReverseArm", 2f);
-        gameController.IsGameStarted = false;
-
-        GetComponent<Collider>().enabled = false;
-
+        
         if (other.gameObject.CompareTag("Loot"))
         {
+            gameController.EndLevelTPV();
+            Invoke("ReverseArm", 2f);
+            gameController.IsGameStarted = false;
+
+            GetComponent<Collider>().enabled = false;
+
+
             HandledLootObject.SetActive(true);
             other.gameObject.SetActive(false);
             DidWin = true;
         }
-        else
+
+        if (other.gameObject.CompareTag("Obstacle"))
         {
+            gameController.IsGameStarted = false;
+            GetComponent<Collider>().enabled = false;
+            rigidbody.isKinematic = true;
             DidWin = false;
+            other.gameObject.SetActive(false);
         }
 
     }
