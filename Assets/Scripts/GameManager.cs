@@ -16,8 +16,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public List<Button> SkillButtons;
-
     [Header("Level Looping")]
 
     public bool IsGameLooping;
@@ -104,7 +102,7 @@ public class GameManager : MonoBehaviour
         Invoke("LevelSuccededLate", 2f);
     }
 
-    public void LevelSuccededLate()
+    private void LevelSuccededLate()
     {
         EndPanel.SetActive(true);
         NextButton.SetActive(true);
@@ -117,10 +115,10 @@ public class GameManager : MonoBehaviour
 
     public void LevelFailed()
     {
-        Invoke("LevelFailedLate", 3f);
+        Invoke("LevelFailedLate", 2f);
     }
 
-    public void LevelFailedLate()
+    private void LevelFailedLate()
     {
         EndPanel.SetActive(true);
         RetryButton.SetActive(true);
@@ -160,7 +158,6 @@ public class GameManager : MonoBehaviour
 
         Currentlevel = level;
 
-        //CountRunners();
     }
 
     public void RestartScene()
@@ -180,13 +177,6 @@ public class GameManager : MonoBehaviour
 
 
     }
-
-    private void Update()
-    {
-        
-
-    }
-    
     
     private void ResetScene()
     {

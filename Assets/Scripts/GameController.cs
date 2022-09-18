@@ -46,6 +46,8 @@ public class GameController : MonoBehaviour
 
     public GameObject ArrowObj;
 
+    public List<GameObject> MapInfoObjectsToDisable;
+
     void Start()
     {
         StartCoroutine(StartLevel());
@@ -58,8 +60,12 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(4f);
         WindowAnimator.SetTrigger("Open");
         cameraFollower.GoToPosSetter(CameraFPSPos, CameraFPSRot, 0);
+        foreach (GameObject item in MapInfoObjectsToDisable)
+        {
+            item.SetActive(false);
+        }
         yield return new WaitForSeconds(1f);
-        ArrowObj.SetActive(false);
+        
         ArmObjects.SetActive(true);
 
         Vector3 startingPos = ArmObjects.transform.position;
@@ -92,8 +98,11 @@ public class GameController : MonoBehaviour
     public void CameraSendToCharPos(bool CharMood)
     {
         cameraFollower.GoToPosSetter(CameraCharPos, CameraCharRot, 1);
-
+        ArmObjects.SetActive(false);
+        ThieveLeanObject.SetActive(false);
         NormalFaceObject.SetActive(false);
+        ThieveObject.SetActive(true);
+        ThieveObject.transform.rotation = Quaternion.Euler(new Vector3(0f, 130f, 0f));
 
         if (CharMood)
         {
@@ -103,19 +112,18 @@ public class GameController : MonoBehaviour
             ThieveHandLoot.SetActive(true);
             HappyFaceObject.SetActive(true);
             ThieveAnimator.SetTrigger("Loot");
-            
+            //GameManager.Instance.LevelSucceded();
         }
         else
         {
+            WindowAnimator.SetTrigger("Close");
             SadFaceObject.SetActive(true);
             ThieveAnimator.SetTrigger("Sad");
+            //GameManager.Instance.LevelFailed();
         }
     }
 
-    public void EndLevelFail()
-    {
-
-    }
+    
 
     
 

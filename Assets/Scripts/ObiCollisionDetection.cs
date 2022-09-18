@@ -33,12 +33,12 @@ public class ObiCollisionDetection : MonoBehaviour
     {
         var world = ObiColliderWorld.GetInstance();
 
-        // just iterate over all contacts in the current frame:
+        // Oyun sonu geri dönme
         if (armScript.DidWin && pointCounter < pointAmount)
         {
             foreach (Oni.Contact contact in e.contacts)
             {
-                // if this one is an actual collision:
+                
                 if (contact.distance < 0.01)
                 {
 
@@ -46,14 +46,33 @@ public class ObiCollisionDetection : MonoBehaviour
                     armScript.BackwardsTransformList[pointCounter].localPosition = (Vector3)contact.pointB;
                     armScript.BackwardsSetPointsList.Add(armScript.BackwardsTransformList[pointCounter]);
                     pointCounter++;
+                    
+                }
+                
+            }
+        }
 
+        if(gameController.IsGameStarted)//Oyun içi collusion
+        {
+            foreach (Oni.Contact contact in e.contacts)
+            {
 
-                    /*ObiColliderBase col = world.colliderHandles[contact.bodyB].owner;
-                    if (col != null)
+                if (contact.distance < 0.05)
+                {
+                    ObiColliderBase col = world.colliderHandles[contact.bodyB].owner;
+                    if (col.CompareTag("Breakable"))
                     {
-                        
+                        col.GetComponent<BreakableScript>().IsHitting = true;
                     }
-                    */
+
+                }
+                else
+                {
+                    ObiColliderBase col = world.colliderHandles[contact.bodyB].owner;
+                    if (col.CompareTag("Breakable"))
+                    {
+                        col.GetComponent<BreakableScript>().IsHitting = false;
+                    }
                 }
             }
         }

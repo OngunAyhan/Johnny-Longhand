@@ -43,6 +43,12 @@ public class ArmScript : MonoBehaviour
 
     public GameObject HandVisual;
 
+    public HandCoughtEffect handCoughtEffect;
+
+    public Transform movementPivot;
+
+    float tension;
+
     void Start()
     {
         //rope = GetComponent<ObiRope>();
@@ -51,80 +57,57 @@ public class ArmScript : MonoBehaviour
 
     void Update()
     {
-
-        
-        if (gameController.IsGameStarted)
-        {
-            if (Input.GetMouseButton(0))
-            {
-                
-                if (!isStartedReverse)
-                {
-
-                    float tension = rope.CalculateLength() / rope.restLength - 1;
-
-                    if (tension > 0.01f)
-                    {
-                        cursor.ChangeLength(rope.restLength + forwardspeed * Time.deltaTime);
-                    }
-                    else
-                    {
-                        if (rope.restLength > minLength)
-                        {
-                            cursor.ChangeLength(rope.restLength - forwardspeed * Time.deltaTime);
-                        }
-                    }
-                }
-
-            }
-        }
-
-        
+        tension = rope.CalculateLength() / rope.restLength - 1;
     }
 
     void FixedUpdate()
     {
         
-        LimitMovement();
+        
         if (gameController.IsGameStarted)
         {
+
+            var lookDirection = movementPivot.position - rigidbody.position;
             
+            Quaternion lookOrientation = Quaternion.LookRotation(lookDirection);
 
-            if (Input.GetMouseButton(0))
+            if (lookOrientation != Quaternion.Euler( Vector3.zero))
             {
+                rigidbody.rotation = Quaternion.Lerp(rigidbody.rotation, lookOrientation, rotationSpeed * Time.fixedDeltaTime);
+            }
 
-                //SetPositionForBackwards();
+            float distance = Vector3.Distance(movementPivot.position, rigidbody.position);
+            if (distance > 0.1f)
+            {
+                Vector3 pos = movementPivot.position - rigidbody.position;
 
-                rotationX = Input.GetAxis("Mouse X") * rotationSpeed;
-                rotationY = Input.GetAxis("Mouse Y") * rotationSpeed;
-
-                Vector3 m_EulerAngleVelocity = new Vector3(-rotationY, rotationX, 0f);
-
-                Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity * rotationSpeed * Time.fixedDeltaTime);
-                rigidbody.rotation = (rigidbody.rotation * deltaRotation);
-
-                rigidbody.MovePosition(rigidbody.position + transform.forward * forwardspeed * Time.fixedDeltaTime);
-
-
-
+                rigidbody.MovePosition(rigidbody.position + pos * forwardspeed * Time.fixedDeltaTime);
             }
             else
             {
-                rigidbody.rotation = Quaternion.Lerp(rigidbody.rotation, Quaternion.Euler(rigidbody.transform.eulerAngles.x, rigidbody.transform.eulerAngles.y, 0f), 8f * Time.deltaTime);
+                rigidbody.rotation = Quaternion.Lerp(rigidbody.rotation, Quaternion.Euler(rigidbody.transform.eulerAngles.x, rigidbody.transform.eulerAngles.y, 0f), 8f * Time.fixedDeltaTime);
                 rigidbody.velocity = Vector3.zero;
                 rigidbody.angularVelocity = Vector3.zero;
+            }
+
+            
+
+            if (tension > 0.02f)
+            {
+                cursor.ChangeLength(rope.restLength + forwardspeed * tension * Time.fixedDeltaTime);
+            }
+            if (tension < 0.01f)
+            {
+                if (rope.restLength > minLength)
+                {
+                    cursor.ChangeLength(rope.restLength - forwardspeed * Time.fixedDeltaTime);
+                }
             }
 
 
             if (rope.restLength >= maxLength)
             {
-                /*gameController.EndLevelTPV();
-                Invoke("ReverseArm", 2f);
-                gameController.IsGameStarted = false;
-
-                GetComponent<Collider>().enabled = false;
-
-                DidWin = false;*/
+                FailedToRetrieveLoot();
             }
         }
         else
@@ -136,11 +119,8 @@ public class ArmScript : MonoBehaviour
 
                 if (BackCount >= BackwardsSetPointsList.Count)
                 {
-                    gameController.ArmObjects.SetActive(false);
-                    gameController.ThieveLeanObject.SetActive(false);
-                    gameController.ThieveObject.SetActive(true);
-                    gameController.ThieveObject.transform.rotation = Quaternion.Euler(new Vector3(0f,130f,0f));
-                    //gameController.ThieveHandledObject.SetActive(true);
+                    
+
                     isStartedReverse = false;
                     gameController.CameraSendToCharPos(DidWin);
                     
@@ -151,8 +131,8 @@ public class ArmScript : MonoBehaviour
                     transform.LookAt(BackwardsSetPointsList[BackCount].position);
                     HandVisual.transform.localPosition = new Vector3(0f,0f,-1.32f);
                     HandVisual.transform.localRotation = Quaternion.Euler(new Vector3(0f, 180f, 0f));
-                    Vector3 directionalVector  = (BackwardsSetPointsList[BackCount].position - transform.position).normalized * forwardspeed * 5f;
-                    rigidbody.velocity = directionalVector;
+                    Vector3 directionalVector  = (BackwardsSetPointsList[BackCount].position - transform.position).normalized;
+                    rigidbody.velocity = directionalVector * Time.fixedDeltaTime * 400f;
                     
                     float distance = Vector3.Distance(rigidbody.position, BackwardsSetPointsList[BackCount].position);
                     if (distance <= 0.5f)
@@ -161,13 +141,12 @@ public class ArmScript : MonoBehaviour
 
                     }
                     
-                    float tension = rope.CalculateLength() / rope.restLength - 1;
 
                     if (tension <= 0.05f)
                     {
                         if (rope.restLength > minLength)
                         {
-                            cursor.ChangeLength(rope.restLength - forwardspeed * 5f * Time.deltaTime);
+                            cursor.ChangeLength(rope.restLength - Time.fixedDeltaTime * 4f);
                         }
                     }
 
@@ -179,21 +158,7 @@ public class ArmScript : MonoBehaviour
         }
     }
 
-
-    private void LimitMovement()
-    {
-
-        rigidbody.position = new Vector3(
-        Mathf.Clamp(rigidbody.position.x, -4f, 3.5f),
-        Mathf.Clamp(rigidbody.position.y, 0f, 1f),
-        Mathf.Clamp(rigidbody.position.z, -5f, 5f));
-    }
-
-    private void LimitRotation()
-    {
-        
-    }
-
+    
     private void OnCollisionEnter(Collision other)
     {
         
@@ -220,11 +185,43 @@ public class ArmScript : MonoBehaviour
             rigidbody.isKinematic = true;
             DidWin = false;
             other.gameObject.SetActive(false);
+            //el yapýþacak
+            handCoughtEffect.enabled = true;
         }
         
     }
 
+    public void FailedWithHandBlowEffect()
+    {
 
+    }
+
+
+    public void FailedToRetrieveLoot()
+    {
+        gameController.IsGameStarted = false;
+
+        GetComponent<Collider>().enabled = false;
+
+        DidWin = false;
+        FailedFunction();
+    }
+
+    public void FailedToRetrieveLoot(float delayTime)
+    {
+        gameController.IsGameStarted = false;
+
+        GetComponent<Collider>().enabled = false;
+
+        DidWin = false;
+        Invoke("FailedFunction",delayTime);
+    }
+
+    private void FailedFunction()
+    {
+        
+        gameController.CameraSendToCharPos(DidWin);
+    }
 
     private void ReverseArm()
     {

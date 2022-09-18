@@ -30,20 +30,20 @@ public class CameraFollower : MonoBehaviour
         //offset = target.transform.position - transform.position;
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         if (!gameController.IsGameStarted)
         {
             return;
         }
-        var newRotation = Quaternion.LookRotation(target.transform.position - transform.position);
-        transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, LookSpeed * Time.deltaTime);
 
-        
+        Quaternion newRotation = Quaternion.LookRotation(target.transform.position - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, LookSpeed * Time.fixedDeltaTime);
+
+
         Vector3 newPosition = target.transform.position - target.transform.forward * offset.z - target.transform.up * offset.y;
-        transform.position = Vector3.Slerp(transform.position, newPosition, Time.deltaTime * FollowSpeed);
+        transform.position = Vector3.Slerp(transform.position, newPosition, Time.fixedDeltaTime * FollowSpeed);
     }
-
 
     private void LateUpdate()
     {
@@ -54,6 +54,8 @@ public class CameraFollower : MonoBehaviour
 
             
         }
+
+        
         
     }
 
