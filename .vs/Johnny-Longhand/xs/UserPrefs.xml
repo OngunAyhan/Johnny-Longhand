@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{86EC64E9-B37B-1A9E-BDD7-84C95C0171A2}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UpperObsPanel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ArmScript.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameController.cs" Line="60" Column="46" />
-      <File FileName="Assets/Scripts/CameraFollower.cs" Line="22" Column="27" />
-      <File FileName="Assets/Scripts/ArmScript.cs" Line="204" Column="44" />
-      <File FileName="Assets/Scripts/UpperObsPanel.cs" Line="10" Column="9" />
+      <File FileName="Assets/Scripts/ArmScript.cs" Line="189" Column="52" />
+      <File FileName="Assets/Scripts/GameManager.cs" />
+      <File FileName="Assets/Scripts/GameController.cs" />
+      <File FileName="Assets/Scripts/CameraFollower.cs" />
+      <File FileName="Assets/Scripts/UpperObsPanel.cs" Line="10" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +13,7 @@
           <Node name="Johnny-Longhand" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="UpperObsPanel.cs" selected="True" />
+                <Node name="ArmScript.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -23,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a98cebe5-f678-434a-9f16-03b77e51f6c1" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4b1971b9-a619-4559-83ab-dcb8a9369953" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

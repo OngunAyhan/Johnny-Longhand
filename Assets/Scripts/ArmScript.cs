@@ -184,9 +184,14 @@ public class ArmScript : MonoBehaviour
             GetComponent<Collider>().enabled = false;
             rigidbody.isKinematic = true;
             DidWin = false;
-            other.gameObject.SetActive(false);
-            //el yapýþacak
-            handCoughtEffect.enabled = true;
+            other.gameObject.GetComponent<Collider>().enabled = false;
+            //el yap??acak
+            Invoke("FailedWithHandBlowEffect", 2f);
+            if (GameObject.FindGameObjectWithTag("Respawn"))
+            {
+                GameObject.FindGameObjectWithTag("Respawn").GetComponent<Animator>().SetTrigger("Alert");
+            }
+            
         }
         
     }
@@ -194,6 +199,9 @@ public class ArmScript : MonoBehaviour
     public void FailedWithHandBlowEffect()
     {
 
+
+
+        handCoughtEffect.enabled = true;
     }
 
 
